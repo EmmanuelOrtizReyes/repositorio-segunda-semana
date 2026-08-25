@@ -1,0 +1,22 @@
+@RefactoringChallenge_Api_HostAddress = http://localhost:5087
+
+GET {{RefactoringChallenge_Api_HostAddress}}/api/orders
+Accept: application/json
+
+###
+
+POST {{RefactoringChallenge_Api_HostAddress}}/api/orders
+Content-Type: application/json
+
+{
+  "customerName": "Ana López",
+  "customerEmail": "ana@example.com",
+  "items": [
+    { "sku": "BOOK", "quantity": 4 }
+  ],
+  "couponCode": "SAVE10"
+}
+
+###
+
+POST {{RefactoringChallenge_Api_HostAddress}}/api/orders/1/confirm
